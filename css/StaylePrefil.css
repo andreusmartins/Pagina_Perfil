@@ -1,0 +1,512 @@
+/* Defina variáveis para cores e fontes */
+:root {
+  --cor-texto: #000;
+  --cor-fundo-container: #f2f2f2;
+  --cor-fundo-rodape: #FFF;
+  --fonte-inter: 'Inter', sans-serif;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modalContent img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+body {
+  margin: 0;
+}
+
+#feedPerfil {
+  overflow-y: auto; 
+  height: 100vh;
+}
+
+.postWrapper {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+#bemvindo,
+#User {
+  color: var(--cor-texto);
+  text-align: center;
+  font-family: var(--fonte-inter);
+}
+
+#User {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#icon {
+  display: grid;
+  grid-template-columns: 20% 50px;
+  grid-template-rows: repeat(2, 50px);
+  grid-column-gap: 10px;
+  grid-row-gap: 16px;
+}
+
+#Seguidores,
+#Seguindo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+#Seguir {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+#coracao,
+#explorar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+#Pcoracao,
+#Pexplorar,
+#Hbio,
+#desc {
+  flex-shrink: 0;
+  color: var(--cor-texto);
+  text-align: center;
+  font-family: var(--fonte-inter);
+}
+
+#Pcoracao,
+#Pexplorar {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#Hbio {
+  width: 100%;
+  max-width: 289px;
+  height: 43px;
+  font-size: 27px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+#desc {
+  width: 100%;
+  max-width: 281px;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+#right {
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#lista {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+#lista::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px; /* Largura da barra de rolagem */
+  height: 100%;
+  background-color: #ccc; /* Cor da barra de rolagem */
+}
+
+#lista:hover::before {
+  background-color: #999; /* Cor da barra de rolagem quando hover */
+}
+
+#lista:hover {
+  overflow-y: scroll;
+}
+
+/** Post **/
+.postBody {
+  border-radius: 10px;
+  border: 1px solid #D9D9D9;
+  background: #FFF;
+  padding:20px;
+  margin-top: 20px;
+}
+
+.postHeader, .postBody, .postConteudo, .imagensWrapper, .postReacoes {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+  .postBody {
+  margin: 18px auto;
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+}
+#Enzo {
+  margin-left: 46px;
+}
+
+.imgPerfilPost img {
+  width: 45px;
+  float: left;
+  margin-right: 10px;
+}
+
+.perfilInfo h3 {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.perfilInfo h3 span {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  font-weight: 400;
+}
+.perfilInfo p {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.postConteudo {
+  padding: 10px 0;
+}
+
+.postConteudo p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+
+.reacoesUsuarios ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.reacoesUsuarios li {
+  display: inline-block;
+  margin: 0 30px;
+  
+}
+
+.reacoesUsuarios li:first-child {
+  margin: 0 30px 0 0;
+}
+
+.reacoesUsuarios li:last-child {
+  margin: 0;
+  float: right;
+}
+
+.reacoesUsuarios img {
+  width: 18px;
+  height: auto;
+  padding-right: 3px;
+}
+
+
+#Rodape {
+  padding: 10px;
+  background-color: var(--cor-fundo-rodape);
+  color: var(--cor-texto);
+  /* margin-left: 48%; */
+  margin-top: 0;
+}
+
+.avator {
+  border-radius: 100px;
+  width: 48px;
+  margin-right: 15px;
+}
+
+.tweet-wrap {
+  max-width: 490px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 3px;
+  padding: 30px;
+  border: 1px solid #e6ecf0;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.tweet-header-info {
+  font-weight: bold;
+}
+
+.tweet-header-info span {
+  color: #657786;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.tweet-header-info p {
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.tweet-img-wrap {
+  padding-left: 60px;
+}
+
+.tweet-info-counts {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.tweet-info-counts div {
+  display: flex;
+  margin-right: 20px;
+}
+
+.tweet-info-counts div svg {
+  color: #657786;
+  margin-right: 10px;
+}
+
+#barraLateral {
+  position: sticky; 
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #f6f6f6;
+}
+
+/* Estilos básicos para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contentt {
+  position: relative;
+  margin: 10% auto;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  width: 50%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Adiciona estilos para esconder a barra de rolagem quando o modal está aberto */
+body.modal-open {
+  overflow: hidden;
+}
+
+
+/* Estilizando para telas menores que 1000px */
+@media screen and (max-width: 1000px) {
+  body {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  #barraLateral {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #f6f6f6;
+
+  #perfil {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      align-content: space-around;
+      width: 100%;
+      height: 100%;
+  }
+  .tweet-header {
+      flex-direction: column;
+  }
+  .tweet-header img {
+      margin-bottom: 20px;
+  }
+  .tweet-header-info p {
+      margin-bottom: 30px;
+  }
+  .tweet-img-wrap {
+      padding-left: 0;
+  }
+  .tweet-info-counts {
+      display: flex;
+      margin-left: 0;
+  }
+  .tweet-info-counts div {
+      margin-right: 10px;
+  }
+}
+
+.espacoTweet {
+  padding: 20px 80px;
+}
+
+#left {
+  text-align: center;
+}
+#left img {
+  margin: 20px 0;
+}
+#icon {
+  margin: 20px 0;
+}
+#Seguir {
+  margin: 20px 0;
+}
+#icon img {
+  margin: 0;
+}
+
+#icon p {
+  padding-top: 10px;
+}
+
+/** Rodape **/
+.rodape {
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.rodape p {
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #000;
+}
+
+.rodape span {
+  font-weight: 600;
+}
+
+/* Estilizando imagens para ter no máximo 100% de largura */
+img {
+  max-width: 100%;
+}
+
+/* Estilizando o rodapé pequeno */
+#Pfooter {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Estilizando para telas menores que 1500px */
+@media screen and (max-width: 1500px)
+
+{
+  #container {
+      width: 100%;
+      margin-left: 0;
+  }
+
+  #Rodape,
+  #right {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Estilizando para telas menores que 500px */
+  @media screen and (max-width: 500px) {
+      body {
+          padding-left: 0;
+          padding-right: 0;
+      }
+      #container {
+          width: 100%;
+          height: auto;
+          margin-left: 0;
+      }
+      #perfil {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: stretch;
+          align-content: space-around;
+      }
+      #Pfooter {
+        display: flex;
+        /* align-content: space-between; */
+        justify-content: space-around;
+
+      }
+  }
+}
