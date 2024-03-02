@@ -1,0 +1,1148 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dosis:wght@200&family=Lobster&display=swap');
+
+/* Seção Geral */
+body {
+  font-family: 'Roboto Mono', monospace, 'Source Code Pro', monospace, 'Lobster', cursive, 'Dosis', sans-serif, 'Caveat', cursive;
+  margin: auto;
+  overflow: auto;
+}
+
+/* Animação de gradiente */
+@keyframes gradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Variáveis CSS */
+:root {
+  --main-color: #00FFFF;
+  --pane-padding: 5px 42px;
+  --colorKhaki-color: var(--F0E68C);
+}
+
+/* Seção Home */
+.home {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #333;
+}
+
+/* Card Hover */
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+/* Keyframes de rotação */
+@keyframes rotation {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+/* Seção Frontal do Card */
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+/* Conteúdo Frontal */
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Badge */
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+/* Descrição */
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+/* Título */
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Parágrafo no Título */
+.title p {
+  width: 50%;
+}
+
+/* Rodapé do Card */
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+/* Imagem Frontal */
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Círculo Animado */
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+/* Parte Inferior do Círculo */
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+/* Parte Direita do Círculo */
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+/* Formulário Container */
+.form-container {
+  /* Restante do seu estilo... */
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+
+/* Keyframes para a animação de flutuação */
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Estilo para a classe .TituloGrid */
+.TituloGrid{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Estilo para a mensagem com ID #msg */
+#msg{
+  border-radius: 10px;
+  width: 50%;
+  font-size: 32px;
+  font-family: inherit;
+  height: 26px;
+  text-align: center;
+  margin-left: 15%;
+}
+
+/* Estilo para a classe .h2-perfil */
+.h2-perfil{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilo para a classe .dec */
+.dec{
+  font-size: unset;
+  margin: 0;
+  color: green;
+  font-size: larger;
+}
+
+/* Estilo para a classe .left */
+.left{
+  text-align: center;
+  width: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Estilos adicionais... */
+
+/* Estilo para a classe .aviso */
+.aviso{
+  align-items: center;
+  font-family: 'Lobster', cursive;  
+  font-size: 3rem;
+}
+
+/* Estilo para a lista (todos os elementos <li>) */
+li{
+  font-family: 'Dosis', sans-serif;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Estilo para a classe .close-menu, inicialmente oculta */
+.close-menu{
+  display: none;
+}
+
+/* Estilo para o menu principal */
+.menu{
+  background-color: #00FFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Estilo para o conteúdo do menu */
+.menu-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  padding-top: 0;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Estilo para a lista não ordenada no menu */
+.menu ul{
+  list-style: none;
+  display: flex;
+}
+
+/* Estilo para os links dentro da lista no menu */
+.menu ul li a {
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+/* Efeito de linha sob o link no menu */
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--secondary-color);
+  transition: all 300ms ease-in-out;
+}
+
+/* Efeito de linha aumenta quando o link é hover */
+.menu ul li a:hover::after {
+  width: 50%;
+  left: 25%;
+}
+
+/* Estilo para o conteúdo do menu quando o menu está aberto */
+.menu-content ul {
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilo para o ícone de menu antes de abrir o menu */
+.close-menu-label::after{
+  content: '☰';
+  position: fixed;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Estilo para o ícone de menu após abrir o menu */
+.close-menu:checked~.menu {
+  display: block;
+}
+.close-menu:checked~.close-menu-label::after {
+  display: block;
+  content: '×';
+}
+
+/* Estilo para um espaço no menu */
+.menu-spacing {
+  display: none;
+}
+
+/* Estilo adicional para a classe .menu, inicialmente oculta */
+.menu {
+  display: none;
+}
+
+/* Estilos adicionais... */
+
+/* Estilo para o corpo da página */
+.corpo {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo para o formulário */
+.form_ {
+    padding: 20px;
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Estilo para os elementos com classes .dcs e .desc */
+.dcs, .desc {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para parágrafos */
+p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+}
+
+/* Estilo específico para elementos com a classe .desc */
+.desc {
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-size: rem;
+}
+
+/* Estilo para o contêiner com a classe .content */
+.content {
+  display: flex;
+}
+
+/* Estilo para imagens com a classe .img */
+.img {
+  width: 500px;
+  height: 500px;
+}
+
+
+
+/* Estilo para botões */
+button {
+  font-size: 16px;
+  position: relative;
+  margin: auto;
+  padding: 1em 2.5em 1em 2.5em;
+  border: none;
+  background: #fff;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de escala ao clicar no botão */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Estilo para o texto dentro do botão */
+button span {
+  color: #464646;
+}
+
+/* Estilo para a borda do botão */
+button .border {
+  position: absolute;
+  border: 0.15em solid #fff;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 9em;
+  height: 3em;
+  transform: translate(-50%, -50%);
+}
+
+/* Efeito de aumento da borda ao passar o mouse sobre o botão */
+button:hover .border {
+  display: block;
+  width: 9.9em;
+  height: 3.7em;
+}
+
+/* Estilo para elementos com a classe .full-rounded */
+.full-rounded {
+  border-radius: 2em;
+}
+
+/* Estilo para o contêiner com a classe .grid */
+.grid {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 550px;
+  height: 700px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/* Adicione mais estilos conforme necessário... */
+/* Estilo para o contêiner com a classe .box */
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de escala ao passar o mouse sobre .box */
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para links dentro de .box */
+.box a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 15px;
+}
+
+/* Estilo para parágrafos com a classe .desc dentro de .box */
+.box p.desc {
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Estilo para o link "back-to-top" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Estilo para o link "back-to-top" quando hover */
+.back-to-top:hover {
+  background-color: #333;
+  color: #fff;
+}
+.cards {
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+.wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+
+/* Estilo responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+  /* Modificações na disposição do layout para telas menores */
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Estilo para o link "back-to-top" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Estilo para o link "back-to-top" quando hover */
+.back-to-top:hover {
+  background-color: #333;
+  color: #fff;
+}
+  
+  /* Ajusta a largura de .box para ocupar 100% da largura */
+  .box {
+    width: 100%;
+    margin: 15px 0;
+  }
+    .Mario{
+  display: none;
+}
+}
+
+/* Estilo para o contêiner com a classe .info */
+.info {
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* Estilo para elementos com a classe .infor dentro de .info */
+.infor {
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo para a imagem com a classe .img_mens dentro de .info */
+.img_mens {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Estilo para a lista desordenada */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para ícones de redes sociais com a classe .fa-git */
+.fa-git {
+  background: #3B5998;
+}
+
+/* Estilo para ícones de redes sociais com a classe .fa-linkedin-in */
+.fa-linkedin-in {
+  background: #55ACEE;
+}
+
+/* Estilo para ícones de redes sociais com a classe .fa-envelope */
+.fa-envelope {
+  background: #DD4B39;
+}
+
+/* Estilo para o cabeçalho da seção de widgets do rodapé */
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Efeito de underline para o cabeçalho da seção de widgets do rodapé */
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+
+/* Estilo para itens de lista dentro do widget do rodapé */
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+
+/* Efeito de cor ao passar o mouse sobre os itens de lista do widget do rodapé */
+.footer-widget ul li a:hover {
+  color: #ff5e14;
+}
+
+/* Estilo para itens de lista dentro do menu do rodapé */
+ooter-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* Efeito de cor ao passar o mouse sobre os itens de lista do menu do rodapé */
+.footer-menu li:hover a {
+  color: #ff5e14;
+}
+
+/* Estilo para o parágrafo dentro do rodapé */
+.footer p {
+  margin: 0;
+  padding: 3rem;
+}
+
+/* Estilo para o contêiner do rodapé */
+footer {
+  text-align: center;
+}
+
+/* Estilo para links dentro do rodapé */
+.footer a {
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden; /* Evita problemas de layout com floats */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+  margin-top: 20px;
+  float: left; /* Coloca a imagem à esquerda */
+  margin-right: 20px; /* Espaçamento à direita da imagem */
+}
+
+.cocal-info {
+  background-color: #fff; /* Cor de fundo da área de informações */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Limpa o float */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #000000;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd700; /* Cor ao passar o mouse */
+}
+
+/* Estilo responsivo para telas menores que 1000px */
+@media (max-width: 1000px) {
+  /* Ajusta o layout da grade para uma única coluna */
+  .grid {
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+  }
+
+  /* Ajusta a largura do cabeçalho para ocupar 100% da largura */
+  .head {
+    width: 100%;
+  }
+
+  /* Adaptação do layout para a seção .home */
+  .home {
+    flex-wrap: wrap;
+    height:100%;
+    margin:10;
+  }
+
+  /* Ajusta o posicionamento vertical de .dcs */
+  .dcs {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  /* Ajusta o layout de .content para telas menores */
+  .content {
+    flex-wrap: wrap;
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    width: 15rem;
+  }
+  .form_ {
+    padding: 20px; /* Adicione algum espaçamento interno para melhor visualização */
+}
+
+.rodape {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+.mario {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display:none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+#info img {
+    width: 100%; /* Garante que a imagem da sua foto seja responsiva */
+    max-width: 300px; /* Define uma largura máxima para a imagem */
+    margin-bottom: 20px; /* Adiciona algum espaçamento abaixo da imagem */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones socialmente */
+    margin-top: 20px; /* Adiciona algum espaçamento acima dos ícones */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Adiciona algum espaçamento entre os ícones */
+}
+  .Mario{
+  display: none;
+}
+}
+
+
+/* Estilos para a seção de habilidades */
+#skills {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.skills {
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.cards {
+/*   display: grid;*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  justify-content: center;
+}
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Style the container element */
+.container {
+  text-align: center; /* Center the content horizontally */
+  margin: 50px auto; /* Add some margin around the container */
+}
+
+/* Style the heading */
+h2 {
+  font-size: 2em; /* Set the font size */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Style the "icons" section */
+.icons {
+  display: flex; /* Arrange icons horizontally */
+  justify-content: space-around; /* Distribute icons evenly */
+  flex-wrap: wrap; /* Allow icons to wrap to multiple lines if needed */
+}
+
+/* Style each icon element */
+.icon {
+  margin: 10px; /* Add some margin between icons */
+  text-align: center; /* Center content within each icon */
+}
+
+/* Style the image box */
+.box {
+  margin-bottom: 10px; /* Add some space below the image */
+}
+
+.box img {
+  width: 50px; /* Set the image width */
+  height: 50px; /* Set the image height */
+}
+
+/* Style the paragraphs */
+p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.8em; /* Set the font size */
+}
+
+/* Remove underline from links */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit the text color from the parent element */
+}
+
+/* Style icons on hover */
+.icon:hover {
+  opacity: 0.8; /* Change opacity on hover */
+}
+
