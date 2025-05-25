@@ -26,7 +26,12 @@ body {
     background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
 }
@@ -118,10 +123,32 @@ section {
     animation: fadeInDown 1s ease 0.4s both;
 }
 
-.hero-img {
+/* .hero-img {
     max-width: 350px;
     border: 5px solid var(--primary-color);
     animation: fadeInUp 1s ease;
+} */
+
+/* Adicione ao seu CSS */
+.hero-img {
+    max-width: 350px;
+    border: 5px solid var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.1s linear;
+}
+
+.hero-img.spinning {
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Seção Habilidades */
@@ -140,9 +167,11 @@ section {
 
 /* Ajuste para ícones específicos */
 .skill-icon-container img[alt="ADVPL"] {
-    width: 35px; /* Ajuste para o logo ADVPL */
+    width: 35px;
+    /* Ajuste para o logo ADVPL */
     height: 35px;
 }
+
 .skills-section {
     background-color: var(--light-color);
 }
@@ -198,7 +227,7 @@ section {
 .skill-bar {
     background: #e0e0e0;
     border-radius: 10px;
-/*     height: 10px; */
+    /*     height: 10px; */
     margin-top: 1rem;
     overflow: hidden;
 }
@@ -212,12 +241,29 @@ section {
     width: 0;
 }
 
-.skill-level.html { width: 90%; }
-.skill-level.css { width: 85%; }
-.skill-level.js { width: 80%; }
-.skill-level.jquery { width: 75%; }
-.skill-level.figma { width: 70%; }
-.skill-level.bootstrap { width: 85%; }
+.skill-level.html {
+    width: 90%;
+}
+
+.skill-level.css {
+    width: 85%;
+}
+
+.skill-level.js {
+    width: 80%;
+}
+
+.skill-level.jquery {
+    width: 75%;
+}
+
+.skill-level.figma {
+    width: 70%;
+}
+
+.skill-level.bootstrap {
+    width: 85%;
+}
 
 /* Seção Projetos */
 /* Estilo para o card placeholder */
@@ -253,6 +299,7 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
 .projects-section {
     background-color: #f8f9fa;
 }
@@ -273,7 +320,8 @@ section {
 
 .project-img-container {
     position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     overflow: hidden;
 }
 
@@ -411,6 +459,7 @@ section {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -422,6 +471,7 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -433,7 +483,7 @@ section {
     .hero-title {
         font-size: 2.8rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.8rem;
     }
@@ -443,25 +493,25 @@ section {
     section {
         padding: 60px 0;
     }
-    
+
     .hero-section {
         text-align: center;
         padding-top: 100px;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.5rem;
     }
-    
+
     .hero-img {
         max-width: 250px;
         margin-top: 2rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
@@ -471,19 +521,19 @@ section {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.3rem;
     }
-    
+
     .hero-text {
         font-size: 1rem;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .back-to-top {
         width: 40px;
         height: 40px;
@@ -492,4 +542,3 @@ section {
         right: 20px;
     }
 }
-

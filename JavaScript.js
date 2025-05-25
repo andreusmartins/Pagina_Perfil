@@ -3,14 +3,14 @@ const skillsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('in-view');
-            
+
             // Anima cada barra individualmente
             document.querySelectorAll('.skill-level').forEach(bar => {
                 const level = bar.getAttribute('data-level');
                 bar.style.setProperty('--level', level);
                 bar.style.width = level;
             });
-            
+
             skillsObserver.unobserve(entry.target);
         }
     });
@@ -63,4 +63,23 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     }).catch(error => {
         alert('Erro ao conectar. Tente novamente.');
     });
+});
+
+// Adicione este script
+document.addEventListener('DOMContentLoaded', function () {
+    const heroImg = document.querySelector('.hero-img');
+
+    if (heroImg) {
+        heroImg.addEventListener('mousedown', function () {
+            this.classList.add('spinning');
+        });
+
+        heroImg.addEventListener('mouseup', function () {
+            this.classList.remove('spinning');
+        });
+
+        heroImg.addEventListener('mouseleave', function () {
+            this.classList.remove('spinning');
+        });
+    }
 });
