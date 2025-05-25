@@ -288,12 +288,13 @@
                                 title="Demonstração do projeto Jogo da Velha"></iframe>
                     </div>
                     <div class="project-body">
-                        <h3 class="project-title">Transação PIX</h3>
-                        <p class="project-text">Pagina de transação via PIX.</p>
+                        <h3 class="project-title">Casa decorado</h3>
+                        <p class="project-text">Pagina de apresentação.</p>
                         <div class="project-techs">
                             <span class="badge bg-primary">HTML</span>
                             <span class="badge bg-info">CSS</span>
                             <span class="badge bg-warning">JavaScript</span>
+                            <span class="badge bg-secondary">Bootstrap</span>
                         </div>
                         <div class="project-links mt-3">
                             <a href="https://codepen.io/andreusmartins/full/PwwyJqP" target="_blank" class="btn btn-sm btn-outline-primary">Ver Código</a>
@@ -302,7 +303,29 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!-- NOVO PROJETO - Pagina de apresentação -->
+            <div class="col">
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <iframe src="https://casadecoradaoficial.netlify.app/" class="project-iframe" 
+                                title="Demonstração do projeto Jogo da Velha"></iframe>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Transação PIX</h3>
+                        <p class="project-text">Pagina de transação via PIX.</p>
+                        <div class="project-techs">
+                            <span class="badge bg-primary">HTML</span>
+                            <span class="badge bg-info">CSS</span>
+                            <span class="badge bg-warning">JavaScript</span>
+                        </div>
+                        <div class="project-links mt-3">
+                            <a href="https://codepen.io/andreusmartins/full/bNdbQJz" target="_blank" class="btn btn-sm btn-outline-primary">Ver Código</a>
+                            <a href="https://casadecoradaoficial.netlify.app/" target="_blank" class="btn btn-sm btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Card vazio para manter o alinhamento (opcional) -->
             <div class="col">
                 <div class="project-card placeholder-card">
@@ -326,7 +349,7 @@
                     <div class="row">
                         <!-- Formulário de Contato -->
                         <div class="col-md-6 mb-4 mb-md-0">
-                            <form id="contactForm" class="contact-form">
+                            <!-- <form id="contactForm" class="contact-form" action="https://formsubmit.co/andreosmartins98@gmail.com" method="POST">
                                 <div class="mb-3">
                                     <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
                                 </div>
@@ -337,7 +360,25 @@
                                     <textarea class="form-control" id="message" rows="4" placeholder="Sua Mensagem" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
-                            </form>
+                            </form> -->
+                            <form id="contactForm" class="contact-form">
+    <div class="mb-3">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Seu Nome" required>
+    </div>
+    <div class="mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Seu E-mail" required>
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
+</form>
+
+<!-- Mensagem de sucesso -->
+<div id="successMessage" style="display: none; margin-top: 15px;" class="alert alert-success">
+    Sua mensagem foi enviada com sucesso!
+</div>
+
                         </div>
                         
                         <!-- Redes Sociais -->

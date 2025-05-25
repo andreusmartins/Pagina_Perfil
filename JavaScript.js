@@ -41,3 +41,26 @@ document.querySelectorAll('.skill-level').forEach(bar => {
     bar.style.setProperty('--level', level);
     bar.style.width = level;
 });
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o redirecionamento
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/andreosmartins98@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            document.getElementById('successMessage').style.display = 'block';
+            form.reset();
+        } else {
+            alert('Ocorreu um erro ao enviar. Tente novamente.');
+        }
+    }).catch(error => {
+        alert('Erro ao conectar. Tente novamente.');
+    });
+});
