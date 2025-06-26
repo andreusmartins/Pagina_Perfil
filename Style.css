@@ -1,4 +1,3 @@
-/* Variáveis CSS */
 :root {
     --primary-color: #00a8ff;
     --secondary-color: #2f3640;
@@ -541,4 +540,39 @@ section {
         bottom: 20px;
         right: 20px;
     }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-img {
+    animation: float 6s ease-in-out infinite;
+}
+
+.btn-primary:hover {
+    animation: pulse 0.5s ease;
 }
