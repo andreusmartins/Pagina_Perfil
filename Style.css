@@ -122,12 +122,6 @@ section {
     animation: fadeInDown 1s ease 0.4s both;
 }
 
-/* .hero-img {
-    max-width: 350px;
-    border: 5px solid var(--primary-color);
-    animation: fadeInUp 1s ease;
-} */
-
 /* Adicione ao seu CSS */
 .hero-img {
     max-width: 350px;
@@ -137,7 +131,7 @@ section {
 }
 
 .hero-img.spinning {
-    animation: spin 0.5s linear infinite;
+    animation: spin 0.1s linear infinite;
 }
 
 @keyframes spin {
@@ -570,7 +564,7 @@ section {
 }
 
 .hero-img {
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 .btn-primary:hover {
